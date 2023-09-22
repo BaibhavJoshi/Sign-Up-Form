@@ -26,7 +26,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus placeat sed tempore quod id asperiores tenetur voluptatem, animi, illum ut et. Rerum vero eligendi harum, recusandae dignissimos consequuntur expedita ipsam?</p>
             </div>
             <div class="form-area">
-                <div class="form-container">
+                <form action="" method="get" id="main-form" class="form-container">
                     <div class="form-item">
                         <input type="text" id="first-name-input" name="first-name" required>
                         <label for="first-name-input">FIRST NAME</label>
@@ -40,7 +40,7 @@
                         <label for="email-input">EMAIL</label>
                     </div>
                     <div class="form-item">
-                        <input type="tel" id="phone-number-input" name="phone-number" required>
+                        <input type="text" pattern="[7-9]{1}\d{9}" id="phone-number-input" name="phone-number" title="Phone number must start with [7, 8 or 9] and must contain 10 digits in total." required>
                         <label for="phone-number-input">PHONE NUMBER</label>
                     </div>
                     <div class="form-item">
@@ -51,8 +51,8 @@
                         <input type="password" id="password-confirmation-input" name="password-confirmation" required>
                         <label for="password-confirmation-input">CONFIRM PASSWORD</label>
                     </div>
-                </div>
-                <button type="submit" class="create-account-btn">CREATE ACCOUNT</button>
+                </form>
+                <button type="submit" form="main-form" class="create-account-btn">CREATE ACCOUNT</button>
                 <div class="not-form-container">
                     <p class="text-with-icon">Already have an account?</p> 
                     <a href="#" class="text-with-icon">LOG IN <span class="icon material-symbols-outlined">arrow_right_alt</span></a>

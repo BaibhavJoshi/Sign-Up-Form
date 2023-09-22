@@ -52,7 +52,7 @@ video{
 }
 
 .right-container{
-    max-height:90%;
+    max-height:95%;
     max-width:90%;
     color:var(--primary-color);
     
@@ -62,7 +62,7 @@ video{
 }
 
 .right-container .header{
-    margin:6em 4em;
+    margin:5em 6em;
     margin-bottom:2em;
 }
 
@@ -103,6 +103,9 @@ video{
     outline:none;
     color:white;
     transition:0.2s;
+
+    letter-spacing:0.15em;
+    font-size:1.1em;
 }
 
 .form-container label{
@@ -126,8 +129,7 @@ video{
     word-spacing:0.3em;
 
     background-color:black;
-    border-left:1px solid var(--secondary-color);
-    border-right:1px solid var(--secondary-color);
+    border:1px solid var(--secondary-color);
 
 }
 
@@ -141,8 +143,7 @@ video{
     word-spacing:0.3em;
 
     background-color:black;
-    border-left:1px solid var(--tertiary-color);
-    border-right:1px solid var(--tertiary-color);
+    border:1px solid var(--tertiary-color);
 
 }
 
@@ -175,12 +176,20 @@ video{
 
 .create-account-btn:hover{
     transform:scale(1.05);
-    color:black;
-    background-color:var(--secondary-color);
 }
 
 .create-account-btn:active{
     transform:scale(0.9);
+}
+
+#main-form:valid~.create-account-btn{
+    background-color:var(--secondary-color);
+    color:black;
+}
+
+#main-form:invalid~.create-account-btn{
+    background-color:var(--tertiary-color);
+    color:white;
 }
 
 .not-form-container{
